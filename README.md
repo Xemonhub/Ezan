@@ -11,7 +11,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "ไม่มี Hub ครับทำไปก่อน 555",
+    Title = "Cave Hub 0.5.0",
     SubTitle = "🥊Ezan Zone Boxing",
     TabWidth = 160,
     Size = UDim2.fromOffset(510, 390),
@@ -19,6 +19,16 @@ local Window = Fluent:CreateWindow({
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "Cave Hub NO.1",
+        SubContent = "", -- Optional
+        Duration = 10 -- Set to nil to make the notification not disappear
+    })
+end
 
 local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
      Title = "Player",
