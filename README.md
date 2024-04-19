@@ -20,23 +20,6 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
---Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
-local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "-" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "-" })
-}
-
-local Options = Fluent.Options
-
-do
-    Fluent:Notify({
-        Title = "Notification",
-        Content = "Cave Hub NO.1",
-        SubContent = "", -- Optional
-        Duration = 10 -- Set to nil to make the notification not disappear
-    })
-end
-
 local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
      Title = "Player",
      Values = Plr,
